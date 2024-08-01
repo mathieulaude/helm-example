@@ -21,7 +21,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
           - name: TEST_SECRET
-            value: <path:forge-dso/data/forge-mi/projects/mla/demo2/REGISTRY/ro-robot | jsonPath {.USERNAME}>
+            value: <path:forge-dso/data/forge-mi/projects/mla/demo2/REGISTRY/ro-robot>
           ports:
             - name: http
               containerPort: 80
