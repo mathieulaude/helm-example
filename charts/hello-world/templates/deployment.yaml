@@ -19,6 +19,9 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+          - name: TEST_SECRET
+            value: <path:forge-dso/data/forge-mi/projects/mla/demo2/REGISTRY/ro-robot#USERNAME>
           ports:
             - name: http
               containerPort: 80
